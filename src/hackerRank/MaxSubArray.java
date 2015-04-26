@@ -72,6 +72,24 @@ public class MaxSubArray {
 		
 	}
 	
+	public static int maxSumContinuous(int[] arr) {
+        int current_sum=arr[0];
+        int best_sum=arr[0];
+        
+        for(int i=1; i<arr.length; i++){
+            int val = current_sum+arr[i];
+            if(val > 0) {
+                current_sum=val;
+            } else {
+                current_sum = 0;
+            }
+            if(current_sum > best_sum){
+            	best_sum = current_sum;
+            }
+        }
+        return best_sum;
+    }
+	
 	private static int maxSubArraySumNonContinuous(int[] arr) {
 		int sum = arr[0];
 		for(int i=1; i<arr.length; i++) {
