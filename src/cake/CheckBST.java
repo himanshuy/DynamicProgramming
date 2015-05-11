@@ -2,6 +2,12 @@ package cake;
 
 import util.TreeNode;
 
+/**
+ * 
+ * @author himanshuyadav
+ *
+ */
+
 public class CheckBST {
 
 	public static boolean isBST(TreeNode root) {
@@ -16,5 +22,31 @@ public class CheckBST {
 			return false;
 		}
 		return isBST(node.left, minValue, node.data) && isBST(node.right, node.data, maxValue);
+	}
+	
+	/**
+	 * Tells isBST with Inorder Traversal
+	 * 
+	 */
+	private static TreeNode prev;
+	
+	public static boolean isBSTWithTreeTraversal(TreeNode root) {
+		
+		if(root == null) return true;
+		
+		if(!isBSTWithTreeTraversal(root.left)) {
+			return false;
+		}
+		
+		if(prev!=null && root.data <= prev.data) {
+			return false;
+		}
+		
+		if(!isBSTWithTreeTraversal(root.right)) {
+			return false;
+		}
+		
+		return true;
+		
 	}
 }

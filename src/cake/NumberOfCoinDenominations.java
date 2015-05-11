@@ -1,5 +1,15 @@
 package cake;
 
+/**
+ * 
+ * Total number of ways of representing an amount
+ * 
+ * denomination[1,2,3] amount = 4, Answer: 4.
+ * 
+ * @author himanshuyadav
+ *
+ */
+
 public class NumberOfCoinDenominations {
 
 	public static int possible_solutions(int[] denominations, int amount) {
