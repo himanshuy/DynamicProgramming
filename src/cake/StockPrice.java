@@ -31,7 +31,7 @@ public class StockPrice {
 		}
 		return maxArray(a);
 	}
-
+	
 	private static int maxArray(int[] a) {
 		int k=0;
 		for(int i=0; i<a.length; i++) {
