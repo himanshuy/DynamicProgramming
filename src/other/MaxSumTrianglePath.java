@@ -1,4 +1,4 @@
-package cake;
+package other;
 
 /**
  * 							  55

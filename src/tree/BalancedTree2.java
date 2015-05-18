@@ -1,4 +1,4 @@
-package cake;
+package tree;
 
 import util.TreeNode;
 

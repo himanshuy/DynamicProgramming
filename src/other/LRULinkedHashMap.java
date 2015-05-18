@@ -1,4 +1,4 @@
-package cake;
+package other;
 
 import java.util.LinkedHashMap;
 
