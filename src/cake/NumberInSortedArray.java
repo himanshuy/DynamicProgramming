@@ -1,5 +1,11 @@
 package cake;
 
+/**
+ * Suppose we had an array of n integers in sorted order. 
+ * How quickly could we check if a given integer is in the array? 
+ *
+ */
+
 public class NumberInSortedArray {
 
 	public static void main(String[] args) {
