@@ -1,4 +1,4 @@
-package other;
+package interviews;
 
 import java.util.LinkedHashMap;
 

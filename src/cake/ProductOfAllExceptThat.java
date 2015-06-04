@@ -21,11 +21,15 @@ import util.ArrayUtil;
 public class ProductOfAllExceptThat {
 	
 	public static void main(String[] args) {
-		int[] arr = {1, 3, 7, 5};
-		productOfAll(arr);
+		int[] arr = {4, 3, 2, 1};
+		productOfAllExceptThatOne(arr);
 	}
 
-	public static int[] productOfAll(int[] arr) {
+	/**
+	 * First calculates product of all the integers before given index. For first index default will be 1.
+	 * Then product of all the all the integers after given index. For last index default will be 1.
+	 */
+	public static int[] productOfAllExceptThatOne(int[] arr) {
 		
 		int[] product_of_all_ints = new int[arr.length];
 		
@@ -38,7 +42,7 @@ public class ProductOfAllExceptThat {
 			i+=1;
 		}
 		
-		ArrayUtil.printArray(product_of_all_ints);
+		printArray(product_of_all_ints);
 		i = arr.length -1;
 		int product_after_index = 1;
 		while(i>=0) {
@@ -46,7 +50,14 @@ public class ProductOfAllExceptThat {
 			product_after_index *= arr[i];
 			i -=1;
 		}
-		ArrayUtil.printArray(product_of_all_ints);
+		printArray(product_of_all_ints);
 		return product_of_all_ints;
+	}
+	
+	public static void printArray(int[] a){
+		System.out.println();
+		for(int i: a) {
+			System.out.print(i+",");
+		}
 	}
 }
