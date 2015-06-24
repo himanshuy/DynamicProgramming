@@ -3,11 +3,11 @@ package skiena;
 public class Fibonacci {
 
 	public static void main(String[] args) {
-		System.out.println(fibonacciCache(7));
+		System.out.println(fibonacci(100));
 	}
 	
 	public static int fibonacci(int n) {
-		int[] f = new int[100];
+		int[] f = new int[n];
 		f[0] = 0;
 		f[1] = 1;
 		
